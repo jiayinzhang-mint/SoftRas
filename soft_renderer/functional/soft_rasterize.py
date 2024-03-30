@@ -70,7 +70,8 @@ class SoftRasterizeFunction(Function):
                                                        gamma_val, ctx.func_rgb_type, ctx.func_alpha_type,
                                                        ctx.texture_type, fill_back)
 
-        ctx.save_for_backward(face_vertices, textures, soft_colors, faces_info, aggrs_info)
+        ctx.save_for_backward(face_vertices, textures,
+                              soft_colors, faces_info, aggrs_info)
         return soft_colors
 
     @staticmethod
